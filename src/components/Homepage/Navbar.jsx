@@ -53,7 +53,7 @@ const Navbar = () => {
 
   return (
     <div className="border-b shadow-md">
-      <div className="navbar w-4/5 mx-auto py-5">
+      <div className="navbar md:w-4/5 md:mx-auto py-5">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

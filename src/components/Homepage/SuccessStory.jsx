@@ -54,7 +54,7 @@ const SuccessStory = () => {
                         <div key={story.id} 
                              className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} 
                                        gap-8 items-center bg-gradient-to-br from-gray-50 to-white 
-                                       p-8 rounded-3xl shadow-lg hover:shadow-xl transition-shadow`}>
+                                       p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-xl transition-shadow`}>
                             <div className='md:w-1/3'>
                                 <img 
                                     src={story.image} 

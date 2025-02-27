@@ -90,7 +90,7 @@ const CaseStudyPage = () => {
             </div>
             
             <div className='flex gao-4 text-center justify-center mt-5'>
-                <img src={arrowImg} alt="" />
+                <img src={arrowImg} alt="" className='md:w-full md:h-full w-24 h-10'/>
                 <p className='text-xl'>Over 4,412 more case studies like these...</p>
             </div>
         </div>
