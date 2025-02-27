@@ -9,12 +9,15 @@ import Home from '../src/components/Homepage/Home'
 import HomeLayout from './components/Homepage/HomeLayout';
 import CaseStudyDetails from './components/CaseStudy/CaseStudyDetails';
 import AllCaseStudy from './components/CaseStudy/AllCaseStudy';
+import AllCourses from './components/Courses/AllCourses';
+import Error from './components/shared/Error';
+import CoursesDetails from './components/Courses/CoursesDetails';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home/>,
-    errorElement:<div><h1>error</h1></div>,
+    errorElement:<Error/>,
     children:[
       {
         path:"/",
@@ -28,6 +31,14 @@ const router = createBrowserRouter([
         path:"/case-study/:id",
         element:<CaseStudyDetails/>,
       },
+      {
+        path:"/courses",
+        element:<AllCourses/>,
+      },
+      {
+        path:"/course/:id",
+        element:<CoursesDetails/>,
+      }
     ]
   },
 ]);
