@@ -14,12 +14,12 @@ const Navbar = () => {
             Home
           </NavLink>
           <NavLink
-            to="/blogs"
+            to="/case-studies"
             className={({ isActive }) =>
               isActive ? "border-b-2 border-black font-bold text-black" : "text-[#262522] "
             }
           >
-            Blogs
+            Case studies
           </NavLink>
           <NavLink
             to="/courses"
@@ -30,20 +30,28 @@ const Navbar = () => {
            Courses
           </NavLink>
           <NavLink
-            to="/about"
+            to="/how-to-guides"
             className={({ isActive }) =>
               isActive ? "border-b-2 border-black text-black font-bold" : "text-[#262522] "
             }
           >
-            About
+            How to guides
           </NavLink>
           <NavLink
-            to="/help"
+            to="/reviews"
             className={({ isActive }) =>
               isActive ? "border-b-2 border-black text-black font-bold" : "text-[#262522] "
             }
           >
-            Help
+            Reviews
+          </NavLink>
+          <NavLink
+            to="/tools-resources"
+            className={({ isActive }) =>
+              isActive ? "border-b-2 border-black text-black font-bold" : "text-[#262522] "
+            }
+          >
+            Tools & resources
           </NavLink>
           
           
@@ -52,7 +60,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="border-b shadow-md">
+    <div className="border-b shadow-md   sticky top-0 bg-[#ffffff] z-50">
       <div className="navbar md:w-4/5 md:mx-auto py-5">
         <div className="navbar-start">
           <div className="dropdown">
@@ -81,8 +89,8 @@ const Navbar = () => {
           </div>
           <Link to="/" className=" font-bold text-xl md:text-2xl text-black">StartUp</Link>
         </div>
-        <div className="navbar-end  lg:gap-4">
-          <ul className="menu menu-horizontal px-1 gap-4  hidden lg:flex">
+        <div className="navbar-end  lg:gap-3 w-full">
+          <ul className="menu menu-horizontal px-1 gap-3  hidden lg:flex">
            {links}
           </ul>
           <div className="">

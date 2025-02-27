@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
+        <div className='border-t shadow-inner'>
             <footer className="footer text-base-content p-10">
   <aside>
     <svg

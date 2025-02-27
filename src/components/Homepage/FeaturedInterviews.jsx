@@ -22,8 +22,8 @@ const FeaturedInterviews = () => {
     <div className="w-4/5 mx-auto py-10">
       <div className="w-4/5 mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-          <h2 className="text-3xl font-bold">Latest Founder Interviews</h2>
-          <button className="mt-4 md:mt-0 btn bg-black text-white hover:bg-gray-800">
+          <h2 className="text-xl md:text-3xl font-bold">Latest Founder Interviews</h2>
+          <button className="mt-4  md:mt-0 btn bg-black text-white hover:bg-gray-800">
             View All Interviews
           </button>
         </div>
