@@ -3,7 +3,7 @@ import { MdBusinessCenter } from 'react-icons/md';
 import bannerImg from '../../assets/bannerImg1.jpg'
 const Banner = () => {
     return (
-        <div className='w-4/5 mx-auto py-10'>
+        <div className='w-4/5 mx-auto mt-5 md:py-20 py-10'>
             <div className='flex flex-col md:flex-row items-center md:justify-between gap-4 md:gap-0'>
                 {/* text */}
                 <div className='flex flex-col gap-4 md:w-3/5'>
