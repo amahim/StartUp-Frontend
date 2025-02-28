@@ -12,6 +12,8 @@ import AllCaseStudy from './components/CaseStudy/AllCaseStudy';
 import AllCourses from './components/Courses/AllCourses';
 import Error from './components/shared/Error';
 import CoursesDetails from './components/Courses/CoursesDetails';
+import AllNews from './components/News/AllNews';
+import NewsDetails from './components/News/NewsDetails';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
       {
         path:"/course/:id",
         element:<CoursesDetails/>,
+      },
+      {
+        path:"/news",
+        element:<AllNews/>,
+      },
+      {
+        path:"/news/:id",
+        element:<NewsDetails/>,
       }
     ]
   },

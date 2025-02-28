@@ -1,4 +1,5 @@
 import React from "react";
+import { HiOutlineLogin } from "react-icons/hi";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -30,6 +31,22 @@ const Navbar = () => {
            Courses
           </NavLink>
           <NavLink
+            to="/tools-resources"
+            className={({ isActive }) =>
+              isActive ? "border-b-2 border-black text-black font-bold" : "text-[#262522] "
+            }
+          >
+            Tools & resources
+          </NavLink>
+          <NavLink
+            to="/pro-payroll"
+            className={({ isActive }) =>
+              isActive ? "border-b-2 border-black text-black font-bold" : "text-[#262522] "
+            }
+          >
+            Pro payroll
+          </NavLink>
+          <NavLink
             to="/how-to-guides"
             className={({ isActive }) =>
               isActive ? "border-b-2 border-black text-black font-bold" : "text-[#262522] "
@@ -45,13 +62,15 @@ const Navbar = () => {
           >
             Reviews
           </NavLink>
+          
+          
           <NavLink
-            to="/tools-resources"
+            to="/news"
             className={({ isActive }) =>
               isActive ? "border-b-2 border-black text-black font-bold" : "text-[#262522] "
             }
           >
-            Tools & resources
+            News
           </NavLink>
           
           
@@ -61,7 +80,7 @@ const Navbar = () => {
 
   return (
     <div className="border-b shadow-md   sticky top-0 bg-[#ffffff] z-50">
-      <div className="navbar md:w-4/5 md:mx-auto py-5">
+      <div className="navbar py-5">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -94,7 +113,9 @@ const Navbar = () => {
            {links}
           </ul>
           <div className="">
-          <Link className="btn border-none text-white bg-black ">Subscribe</Link>
+          <Link to="/signin" className="btn border-none text-white bg-black ">Sign In
+          <HiOutlineLogin  className="text-lg"/>
+          </Link>
         </div> 
         </div>
         
