@@ -71,7 +71,7 @@ const news = [
 
 const NewsSection = () => {
 
-    const homeNews = news.slice(2)
+    const homeNews = news.slice(0,3)
 
     return (
         <div className="w-4/5 mx-auto py-10 ">

@@ -94,7 +94,7 @@ const NewsDetails = () => {
             <span className="text-gray-500">{newsItem.date}</span>
           </div>
 
-          <h1 className="text-4xl font-bold mb-4">{newsItem.title}</h1>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">{newsItem.title}</h1>
           <p className="text-xl text-gray-600 mb-4">{newsItem.subtitle}</p>
 
           <div className="flex items-center gap-4 mb-6">

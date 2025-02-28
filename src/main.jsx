@@ -14,6 +14,9 @@ import Error from './components/shared/Error';
 import CoursesDetails from './components/Courses/CoursesDetails';
 import AllNews from './components/News/AllNews';
 import NewsDetails from './components/News/NewsDetails';
+import AllReviews from './components/Reviews/AllReviews';
+import AllIdeas from './components/Ideas/AllIdeas';
+import IdeaDetails from './components/Ideas/IdeaDetails';
 
 const router = createBrowserRouter([
   {
@@ -42,12 +45,24 @@ const router = createBrowserRouter([
         element:<CoursesDetails/>,
       },
       {
+        path:"/ideas",
+        element:<AllIdeas/>,
+      },
+      {
+        path:"/ideas/:id",
+        element:<IdeaDetails/>,
+      },
+      {
         path:"/news",
         element:<AllNews/>,
       },
       {
         path:"/news/:id",
         element:<NewsDetails/>,
+      },
+      {
+        path: "/reviews",
+        element: <AllReviews/>,
       }
     ]
   },

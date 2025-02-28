@@ -30,22 +30,22 @@ const Navbar = () => {
           >
            Courses
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/tools-resources"
             className={({ isActive }) =>
               isActive ? "border-b-2 border-black text-black font-bold" : "text-[#262522] "
             }
           >
             Tools & resources
-          </NavLink>
-          <NavLink
+          </NavLink> */}
+          {/* <NavLink
             to="/pro-payroll"
             className={({ isActive }) =>
               isActive ? "border-b-2 border-black text-black font-bold" : "text-[#262522] "
             }
           >
             Pro payroll
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/how-to-guides"
             className={({ isActive }) =>
@@ -55,22 +55,31 @@ const Navbar = () => {
             How to guides
           </NavLink>
           <NavLink
-            to="/reviews"
+            to="/ideas"
             className={({ isActive }) =>
               isActive ? "border-b-2 border-black text-black font-bold" : "text-[#262522] "
             }
           >
-            Reviews
+            Ideas
           </NavLink>
           
           
           <NavLink
-            to="/news"
+            to="/resources"
             className={({ isActive }) =>
               isActive ? "border-b-2 border-black text-black font-bold" : "text-[#262522] "
             }
           >
-            News
+            Resources
+          </NavLink>
+
+          <NavLink
+            to="/signin"
+            className={({ isActive }) =>
+              isActive ? "border-b-2 border-black text-black font-bold" : "text-[#262522] "
+            }
+          >
+            Sign In
           </NavLink>
           
           
@@ -112,9 +121,11 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 gap-3  hidden lg:flex">
            {links}
           </ul>
-          <div className="">
-          <Link to="/signin" className="btn border-none text-white bg-black ">Sign In
-          <HiOutlineLogin  className="text-lg"/>
+          <div className="flex items-center gap-2">
+          {/* <Link to="/signin" className="btn  ">Sign In
+          </Link> */}
+          <Link to="/subscribe" className="btn border-none text-white bg-black ">Subscribe
+          
           </Link>
         </div> 
         </div>

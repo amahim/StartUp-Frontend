@@ -155,6 +155,9 @@ const caseStudies = [
 ];
 
 const CaseStudyPage = () => {
+
+  const SlicedCaseStudies = caseStudies.slice(0,4)
+
   return (
     <div className="w-4/5 mx-auto py-10">
       <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">
@@ -164,7 +167,7 @@ const CaseStudyPage = () => {
       </h2>
 
       <div className="grid md:grid-cols-2 gap-6 mt-10">
-        {caseStudies.map((study) => (
+        {SlicedCaseStudies.map((study) => (
           <div
             key={study.id}
             className="bg-white rounded-xl shadow-lg overflow-hidden border"

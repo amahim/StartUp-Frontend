@@ -7,6 +7,8 @@ import FailureStories from './FailureStories';
 import SuccessStory from './SuccessStory';
 import Newsletter from './Newsletter';
 import NewsSection from './NewsSection';
+import ReviewsPage from './ReviewsPage';
+import Ideas from './Ideas';
 
 
 const HomeLayout = () => {
@@ -16,10 +18,12 @@ const HomeLayout = () => {
             <StatCounter/>
             <CaseStudyPage/>
             <SuccessStory/>
+            <Ideas/>
             <FeaturedInterviews/>
             <FailureStories/>
             <NewsSection/>
             <Newsletter/>
+            <ReviewsPage/>
         </div>
     );
 };

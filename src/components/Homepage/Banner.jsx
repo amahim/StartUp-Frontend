@@ -10,7 +10,7 @@ const Banner = () => {
     <div className="w-4/5 mx-auto mt-5 md:py-20 py-10">
       <div className="flex flex-col md:flex-row items-center md:justify-between gap-4 md:gap-0">
         {/* text */}
-        {/* <div className='flex flex-col gap-4 md:w-3/5'>
+        <div className='flex flex-col gap-4 md:w-3/5'>
                     <div className='flex gap-2 items-center text-lg font-medium text-black'>
                         <p><MdBusinessCenter /></p>
                         <p>Lorem Ipsum</p>
@@ -28,10 +28,12 @@ const Banner = () => {
                     <input type="text" placeholder="Enter your email" className="input input-bordered rounded-b-none md:rounded-xl" />
                         <Link to="/signin" className='btn bg-black text-white rounded-t-none md:rounded-xl border md:border-none'>Start Now</Link>
                     </div>
-                </div> */}
-        <div className="flex flex-col gap-4 md:w-3/5">
-          {/* "Lorem Ipsum" Text - Coming from Left */}
-          <motion.div
+                </div>
+                {/* animations text */}
+                
+         {/* <div className="flex flex-col gap-4 md:w-3/5"> */}
+         
+          {/* <motion.div
             initial={{ opacity: 0, x: -80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -41,10 +43,10 @@ const Banner = () => {
               <MdBusinessCenter />
             </p>
             <p>Lorem Ipsum</p>
-          </motion.div>
+          </motion.div> */}
 
           {/* Title (Coming from Left) */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: -80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -54,10 +56,10 @@ const Banner = () => {
               <br />
               Get Ready For Work
             </h1>
-          </motion.div>
+          </motion.div> */}
 
           {/* Smaller text (Coming from Right) */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
@@ -65,9 +67,9 @@ const Banner = () => {
             <p className="text-lg font-medium">
               Learn from startup failures and successes in 5 min or less
             </p>
-          </motion.div>
+          </motion.div> */}
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeInOut", delay: 0.4 }}
@@ -76,10 +78,10 @@ const Banner = () => {
               The stories, ideas, and tactics that will make you a 10x better
               founder
             </p>
-          </motion.div>
+          </motion.div> */}
 
           {/* Input + Button (Coming from Right) */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeInOut", delay: 0.4 }}
@@ -96,19 +98,23 @@ const Banner = () => {
             >
               Start Now
             </Link>
-          </motion.div>
-        </div>
+          </motion.div> */}
+        {/* </div>  */}
 
         {/* img */}
          {/* Lottie Animation (Fades in & Slides Up) */}
-         <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
+         {/* <motion.div */}
+         <div
+                // initial={{ opacity: 0, y: 30 }}
+                // animate={{ opacity: 1, y: 0 }}
+                // transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
                 className="md:w-2/5"
             >
                 <Lottie animationData={bannerLottie} />
-            </motion.div>
+                
+
+                </div>
+            {/* </motion.div> */}
       </div>
     </div>
   );
