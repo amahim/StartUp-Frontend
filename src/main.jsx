@@ -17,6 +17,8 @@ import NewsDetails from './components/News/NewsDetails';
 import AllReviews from './components/Reviews/AllReviews';
 import AllIdeas from './components/Ideas/AllIdeas';
 import IdeaDetails from './components/Ideas/IdeaDetails';
+import AllGuides from './components/Guides/AllGuides';
+import GuideDetails from './components/Guides/GuideDetails';
 
 const router = createBrowserRouter([
   {
@@ -59,6 +61,14 @@ const router = createBrowserRouter([
       {
         path:"/news/:id",
         element:<NewsDetails/>,
+      },
+      {
+        path:"/guides",
+        element:<AllGuides/>,
+      },
+      {
+        path:"/guides/:id",
+        element:<GuideDetails/>,
       },
       {
         path: "/reviews",

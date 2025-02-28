@@ -52,14 +52,14 @@ const Navbar = () => {
             Pro payroll
           </NavLink> */}
       <NavLink
-        to="/how-to-guides"
+        to="/guides"
         className={({ isActive }) =>
           isActive
             ? "border-b-2 border-black text-black font-bold"
             : "text-[#262522] "
         }
       >
-        How to guides
+        Guides
       </NavLink>
       <NavLink
         to="/ideas"
