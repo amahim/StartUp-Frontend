@@ -26,8 +26,9 @@ const HomeLayout = () => {
             <FailureStories/>
             <Guides/>
             <NewsSection/>
-            <Newsletter/>
             <ReviewsPage/>
+            <Newsletter/>
+            
         </div>
     );
 };

@@ -21,6 +21,9 @@ import AllGuides from './components/Guides/AllGuides';
 import GuideDetails from './components/Guides/GuideDetails';
 import AllResources from './components/Resources/AllResources';
 import ResourceDetails from './components/Resources/ResourceDetails';
+import SignIn from './components/User/SignIn';
+import SignUp from './components/User/SignUp';
+import Packages from './components/Subscribes/Packages';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +35,7 @@ const router = createBrowserRouter([
         path:"/",
         element:<HomeLayout/>
       },
+      
       {
         path:"/case-studies",
         element:<AllCaseStudy/>
@@ -83,9 +87,21 @@ const router = createBrowserRouter([
       {
         path: "/reviews",
         element: <AllReviews/>,
-      }
+      },
+      {
+        path:"/packages",
+        element:<Packages/>
+      },
     ]
   },
+  {
+    path:"/signin",
+    element: <SignIn/>
+  },
+  {
+    path:"/signup",
+    element: <SignUp/>
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(

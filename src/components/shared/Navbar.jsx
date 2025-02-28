@@ -154,7 +154,7 @@ const Navbar = () => {
               {/* <Link to="/signin" className="btn  ">Sign In
               </Link> */}
               <Link
-                to="/subscribe"
+                to="/packages"
                 className="btn border-none text-white bg-black "
               >
                 Subscribe
