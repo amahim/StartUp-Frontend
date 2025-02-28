@@ -165,7 +165,7 @@ const Navbar = () => {
       </div>
       
       {/* Separate search div for mobile - moved outside sticky navbar */}
-      <div className="pb-5 mt-2 md:mt-0 md:pb-0 bg-[#ffffff]">
+      {/* <div className="pb-5 mt-2 md:mt-0 md:pb-0 bg-[#ffffff]">
         <label className="md:hidden input input-bordered flex items-center gap-2 w-4/5 mx-auto ">
           <input type="text" className="grow " placeholder="Search" />
           <svg
@@ -181,7 +181,7 @@ const Navbar = () => {
             />
           </svg>
         </label>
-      </div>
+      </div> */}
     </>
   );
 };

@@ -85,15 +85,15 @@ const GuideDetails = () => {
                 />
                 
                 <div className="p-8">
-                    <div className="flex items-center gap-4 mb-4 text-gray-600">
-                        <span className="flex items-center">
-                            <FiUser className="mr-2" /> {guide.author}
+                    <div className="flex text-start md:flex-row flex-col  gap-2 md:gap-4 mb-4 text-gray-600">
+                        <span className="items-center flex gap-2">
+                            <FiUser  /> {guide.author}
                         </span>
-                        <span className="flex items-center">
-                            <FiCalendar className="mr-2" /> {guide.date}
+                        <span className="items-center flex gap-2">
+                            <FiCalendar  /> {guide.date}
                         </span>
-                        <span className="flex items-center">
-                            <FiClock className="mr-2" /> {guide.readTime}
+                        <span className="items-center flex gap-2">
+                            <FiClock  /> {guide.readTime}
                         </span>
                     </div>
 

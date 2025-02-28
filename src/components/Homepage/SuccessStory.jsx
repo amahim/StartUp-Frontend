@@ -71,7 +71,7 @@ const SuccessStory = () => {
                                         {story.income}
                                     </span>
                                 </div>
-                                <h2 className='text-3xl font-bold text-gray-800'>
+                                <h2 className='text-2xl md:text-3xl font-bold text-gray-800'>
                                     {story.title}
                                 </h2>
                                 <div className='flex items-center gap-2 text-gray-600'>

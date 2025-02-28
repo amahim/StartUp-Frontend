@@ -10,6 +10,7 @@ import NewsSection from './NewsSection';
 import ReviewsPage from './ReviewsPage';
 import Ideas from './Ideas';
 import Guides from './Guides';
+import Resources from './Resources';
 
 
 const HomeLayout = () => {
@@ -21,6 +22,7 @@ const HomeLayout = () => {
             <SuccessStory/>
             <Ideas/>
             <FeaturedInterviews/>
+            <Resources/>
             <FailureStories/>
             <Guides/>
             <NewsSection/>
