@@ -1,6 +1,12 @@
-import React from "react";
-import arrowImg from "../../assets/Vector.png";
+import React, { useRef } from 'react';
+// import arrowImg from "../../assets/Vector.png";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const caseStudies = [
   {
@@ -155,79 +161,99 @@ const caseStudies = [
 ];
 
 const CaseStudyPage = () => {
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+  const SlicedCaseStudies = caseStudies.slice(0, 4);
 
-  const SlicedCaseStudies = caseStudies.slice(0,4)
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty('--progress', 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  };
 
   return (
     <div className="w-4/5 mx-auto py-10">
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">
-        See exactly how an online business goes from{" "}
-        <span className="bg-green-200">zero</span> to{" "}
-        <span className="bg-green-200">millions</span>:
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
+        Inside the Journey of Growing an Online Business from Scratch
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-6 mt-10">
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        onAutoplayTimeLeft={onAutoplayTimeLeft}
+        className="mySwiper"
+      >
         {SlicedCaseStudies.map((study) => (
-          <div
-            key={study.id}
-            className="bg-white rounded-xl shadow-lg overflow-hidden border"
-          >
-            <div className="flex md:flex-row flex-col gap-4 p-4">
-              <div className="relative md:w-32 md:h-32 h-56 flex-shrink-0 ">
-                <img
-                  src={study.image}
-                  alt={study.author}
-                  className="w-full h-full object-cover rounded-lg"
-                />
-                <div className="absolute bottom-2 left-2 bg-white px-2 py-1 rounded-md text-sm font-semibold">
-                  {study.income}
+          <SwiperSlide key={study.id}>
+            <div className="bg-white md:h-56 rounded-xl shadow-lg overflow-hidden border max-w-2xl mx-auto">
+              <div className="flex md:flex-row flex-col gap-4 p-4">
+                <div className="relative md:w-32 md:h-32 h-56 flex-shrink-0">
+                  <img
+                    src={study.image}
+                    alt={study.author}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                  <div className="absolute bottom-2 left-2 bg-white px-2 py-1 rounded-md text-sm font-semibold">
+                    {study.income}
+                  </div>
+                  <div className="flex justify-end md:justify-start">
+                    <Link
+                      to={`/case-study/${study.id}`}
+                      className="btn bg-[#6390f0c9] text-white border-none w-36 md:w-full mt-2 py-1"
+                    >
+                      Read More
+                    </Link>
+                  </div>
                 </div>
-                <div className="flex justify-end md:justify-start">
-                  <Link
-                    to={`/case-study/${study.id}`}
-                    className=" btn bg-[#6390f0c9]  text-white border-none w-36 md:w-full mt-2 py-1"
-                  >
-                    Read More
-                  </Link>
-                </div>
-              </div>
 
-              <div className="flex flex-col flex-grow">
-                <div className="bg-blue-100 text-blue-600 text-sm w-fit px-3 py-1 rounded-full mb-2">
-                  case study
-                </div>
-                <h3 className="md:mt-0 mt-2 font-bold text-xl mb-2">
-                  {study.title}
-                </h3>
-                <div>
-                  <p className="text-gray-600 mb-1">
-                    {study.author} breaks down:
-                  </p>
-                  <ul className="space-y-1">
-                    {study.points.map((point, index) => (
-                      <li key={index} className="flex items-center gap-2">
-                        <span className="text-green-500">✓</span>
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="flex flex-col flex-grow">
+                  <div className="bg-blue-100 text-blue-600 text-sm w-fit px-3 py-1 rounded-full mb-2">
+                    case study
+                  </div>
+                  <h3 className="md:mt-0 mt-2 font-bold text-start text-xl mb-2">
+                    {study.title}
+                  </h3>
+                  <div>
+                    <p className="text-gray-600 text-start mb-1">
+                      {study.author} breaks down:
+                    </p>
+                    <ul className="space-y-1">
+                      {study.points.map((point, index) => (
+                        <li key={index} className="flex text-start items-center gap-2">
+                          <span className="text-green-500">✓</span>
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+        <div className="autoplay-progress" slot="container-end">
+          <svg viewBox="0 0 48 48" ref={progressCircle}>
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span ref={progressContent}></span>
+        </div>
+      </Swiper>
 
-      <div className="mt-5 flex md:flex-row md:justify-between flex-col ">
-        <div className="flex gap-4 ">
-          <img src={arrowImg} alt="" className="w-24 h-10" />
-          <p className="text-xl">Over 4,412 more case studies like these...</p>
-        </div>
-        <div>
-          <Link to="/case-studies" className="mt-4 flex justify-center md:mt-0 btn bg-black text-white hover:bg-gray-800">
-            View All Case Studies
-          </Link>
-        </div>
+      <div className="mt-10">
+        <Link
+          to="/case-studies"
+          className="w-full md:w-[350px] mx-auto flex justify-center btn bg-black text-white hover:bg-gray-800"
+        >
+          View All Case Studies
+        </Link>
       </div>
     </div>
   );

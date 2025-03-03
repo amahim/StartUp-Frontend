@@ -1,34 +1,33 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FiSearch } from 'react-icons/fi';
 
 const resourcesData = [
     {
         id: 1,
-        title: "Best Degrees for Entrepreneurs",
-        category: "Education",
+        title: "Best Business Models for 2024",
+        category: "Business",
         image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500",
-        description: "Discover the best degrees for entrepreneurs, from business administration to computer science",
+        description: "Explore the most profitable and sustainable business models for entrepreneurs",
         author: "Michael Ross",
         date: "March 15, 2024",
         readTime: "10 min read"
     },
     {
         id: 2,
-        title: "Top Startup Conferences",
-        category: "Events",
+        title: "AI Tools for Entrepreneurs",
+        category: "Tech",
         image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=500",
-        description: "Explore the top startup conferences to attend in 2024 to network and learn",
+        description: "Essential AI tools and platforms to streamline your business operations",
         author: "Sarah Chen",
         date: "March 14, 2024",
         readTime: "8 min read"
     },
     {
         id: 3,
-        title: "Best Gifts for Entrepreneurs",
-        category: "Lifestyle",
+        title: "Side Hustle Ideas That Scale",
+        category: "Side Hustle",
         image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500",
-        description: "Find the perfect gifts for entrepreneurs and business owners",
+        description: "Proven side hustle ideas that can grow into full-time businesses",
         author: "Alex Thompson",
         date: "March 13, 2024",
         readTime: "6 min read"
@@ -36,17 +35,11 @@ const resourcesData = [
 ];
 
 const AllResources = () => {
-    const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('All');
-
-    const categories = ['All', 'Education', 'Events', 'Lifestyle', 'Tools', 'Software'];
+    const categories = ['All', 'Business', 'Tech', 'Money', 'Side Hustle'];
 
     const filteredResources = resourcesData.filter(resource => {
-        const matchesSearch = 
-            resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            resource.description.toLowerCase().includes(searchTerm.toLowerCase());
-        const matchesCategory = selectedCategory === 'All' || resource.category === selectedCategory;
-        return matchesSearch && matchesCategory;
+        return selectedCategory === 'All' || resource.category === selectedCategory;
     });
 
     return (
@@ -56,22 +49,13 @@ const AllResources = () => {
                 <p className="text-xl text-gray-600">Everything you need to start and grow your business</p>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-                <div className="relative flex-1">
-                    <FiSearch className="absolute left-3 top-3 text-gray-400" />
-                    <input
-                        type="text"
-                        placeholder="Search resources..."
-                        className="input input-bordered w-full pl-10"
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                    />
-                </div>
+            <div className="mb-8">
                 <select
-                    className="select select-bordered w-full md:w-48"
+                    className="select select-bordered w-full"
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
                 >
+                    <option disabled>Browse by topics</option>
                     {categories.map(category => (
                         <option key={category} value={category}>{category}</option>
                     ))}

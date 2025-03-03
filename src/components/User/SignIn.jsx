@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaGoogle, FaFacebook, FaTwitter } from 'react-icons/fa';
+import { AiOutlineHome } from 'react-icons/ai';
 
 const SignIn = () => {
     const handleSubmit = (e) => {
@@ -11,8 +12,9 @@ const SignIn = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
             <div className="bg-white p-8 rounded-lg shadow-md w-96">
-                <Link to="/" className='text-white bg-[#00000071] px-2 rounded-full text-center flex justify-center w-36 mx-auto mb-4'>Back to home</Link>
-                <h2 className="text-3xl font-bold text-center mb-6 text-black">Sign In</h2>
+                <Link to="/" className='text-white bg-[#00000071] px-2 rounded-full text-center items-center gap-2 flex justify-center w-48 mx-auto mb-4'><AiOutlineHome />Back to home</Link>
+                
+                <h2 className="text-3xl font-bold text-center mb-6 text-black"> Sign In</h2>
                 
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
