@@ -7,10 +7,12 @@ import FailureStories from './FailureStories';
 import SuccessStory from './SuccessStory';
 import Newsletter from './Newsletter';
 import NewsSection from './NewsSection';
-import ReviewsPage from './ReviewsPage';
+// import ReviewsPage from './ReviewsPage';
 import Ideas from './Ideas';
 import Guides from './Guides';
 import Resources from './Resources';
+import AuthorsPage from './AuthorsPage';
+import ContributorsPage from './ContributorsPage';
 
 
 const HomeLayout = () => {
@@ -23,10 +25,12 @@ const HomeLayout = () => {
             <FailureStories/>
             <FeaturedInterviews/>
             <Ideas/>
+            <AuthorsPage/>
             <CaseStudyPage/>
+            <ContributorsPage/>
             <Guides/>
             <NewsSection/>
-            <ReviewsPage/>
+            {/* <ReviewsPage/> */}
             <Newsletter/>
             
         </div>

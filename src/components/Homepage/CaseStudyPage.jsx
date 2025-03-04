@@ -176,13 +176,13 @@ const CaseStudyPage = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
+        // pagination={{
+        //   clickable: true,
+        // }}
         navigation={false}
         modules={[Autoplay, Pagination]}
         className="mySwiper"
-        style={{ paddingBottom: "30px" }}
+        // style={{ paddingBottom: "30px" }}
       >
         {SlicedCaseStudies.map((study) => (
           <SwiperSlide key={study.id}>

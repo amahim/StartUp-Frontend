@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ReviewsPage from './ReviewsPage';
 
 const Packages = () => {
     const [isYearly, setIsYearly] = useState(false);
@@ -56,7 +57,7 @@ const Packages = () => {
     ];
 
     return (
-        <div className="w-4/5 mx-auto py-16">
+        <div className="w-4/5 mx-auto py-10">
             {/* Header */}
             <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold mb-4">Choose Your Plan</h1>
@@ -147,6 +148,12 @@ const Packages = () => {
                     30-day money-back guarantee. No questions asked.
                 </p>
             </div>
+
+            {/* reviews */}
+            <div>
+               <ReviewsPage/> 
+            </div>
+            
         </div>
     );
 };

@@ -77,7 +77,7 @@ const ReviewsPage = () => {
     };
 
     return (
-        <div className="w-4/5 mx-auto py-10">
+        <div className="py-10">
             <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold mb-4">What Our Members Say</h2>
                 <p className="text-xl text-gray-600">Join thousands of satisfied founders learning from real experiences</p>

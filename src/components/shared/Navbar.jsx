@@ -66,7 +66,7 @@ const Navbar = () => {
       >
         Resources
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to="/authors"
         className={({ isActive }) =>
           isActive
@@ -85,7 +85,7 @@ const Navbar = () => {
         }
       >
         Contributors
-      </NavLink>
+      </NavLink> */}
 
       <NavLink
         to="/signin"
@@ -140,7 +140,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop nav items (excluding Sign In) */}
-          <ul className=" hidden lg:flex items-center gap-3 ml-4 text-sm">
+          <ul className=" hidden lg:flex items-center gap-3 ml-6">
             {links}
           </ul>
         </div>

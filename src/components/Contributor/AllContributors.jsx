@@ -33,10 +33,18 @@ const contributors = [
 
 const AllContributors = () => {
   return (
-    <div className="w-4/5 mx-auto py-10">
-      <h1 className="text-4xl font-bold text-center mb-12">Our Contributors</h1>
+    <div className=" py-10">
+      {/* form */}
+      <div className="flex flex-col justify-center gap-3 bg-base-300 p-10">
+         <p className="text-2xl md:text-3xl text-black font-bold text-center">Join as a contributor</p>
+        <div className="join flex justify-center">
+          <input className="input join-item input-bordered" placeholder="Email" />
+          <button className="btn join-item rounded-r-xl text-white bg-black ">Be a contributor</button>
+        </div>
+      </div>
+      <h1 className="text-4xl font-bold text-center my-10">Our Contributors</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {contributors.map((contributor) => (
           <div
             key={contributor.id}
