@@ -19,8 +19,8 @@ const Navbar = () => {
         to="/case-studies"
         className={({ isActive }) =>
           isActive
-            ? "border-b-2 border-black font-bold text-black"
-            : "text-[#262522] "
+            ? "border-b-2 border-black font-bold text-black whitespace-nowrap"
+            : "text-[#262522] whitespace-nowrap"
         }
       >
         Case studies
@@ -35,22 +35,6 @@ const Navbar = () => {
       >
         Courses
       </NavLink>
-      {/* <NavLink
-            to="/tools-resources"
-            className={({ isActive }) =>
-              isActive ? "border-b-2 border-black text-black font-bold" : "text-[#262522] "
-            }
-          >
-            Tools & resources
-          </NavLink> */}
-      {/* <NavLink
-            to="/pro-payroll"
-            className={({ isActive }) =>
-              isActive ? "border-b-2 border-black text-black font-bold" : "text-[#262522] "
-            }
-          >
-            Pro payroll
-          </NavLink> */}
       <NavLink
         to="/guides"
         className={({ isActive }) =>
@@ -81,6 +65,26 @@ const Navbar = () => {
         }
       >
         Resources
+      </NavLink>
+      <NavLink
+        to="/authors"
+        className={({ isActive }) =>
+          isActive
+            ? "border-b-2 border-black text-black font-bold"
+            : "text-[#262522] "
+        }
+      >
+        Authors
+      </NavLink>
+      <NavLink
+        to="/contributors"
+        className={({ isActive }) =>
+          isActive
+            ? "border-b-2 border-black text-black font-bold"
+            : "text-[#262522] "
+        }
+      >
+        Contributors
       </NavLink>
 
       <NavLink
@@ -136,7 +140,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop nav items (excluding Sign In) */}
-          <ul className="hidden lg:flex items-center gap-4 ml-8">
+          <ul className=" hidden lg:flex items-center gap-3 ml-4 text-sm">
             {links}
           </ul>
         </div>

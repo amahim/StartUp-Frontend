@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 // import arrowImg from "../../assets/Vector.png";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -161,14 +161,7 @@ const caseStudies = [
 ];
 
 const CaseStudyPage = () => {
-  const progressCircle = useRef(null);
-  const progressContent = useRef(null);
   const SlicedCaseStudies = caseStudies.slice(0, 4);
-
-  const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty('--progress', 1 - progress);
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
-  };
 
   return (
     <div className="w-4/5 mx-auto py-10">
@@ -186,10 +179,10 @@ const CaseStudyPage = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        onAutoplayTimeLeft={onAutoplayTimeLeft}
+        navigation={false}
+        modules={[Autoplay, Pagination]}
         className="mySwiper"
+        style={{ paddingBottom: "30px" }}
       >
         {SlicedCaseStudies.map((study) => (
           <SwiperSlide key={study.id}>
@@ -239,12 +232,6 @@ const CaseStudyPage = () => {
             </div>
           </SwiperSlide>
         ))}
-        <div className="autoplay-progress" slot="container-end">
-          <svg viewBox="0 0 48 48" ref={progressCircle}>
-            <circle cx="24" cy="24" r="20"></circle>
-          </svg>
-          <span ref={progressContent}></span>
-        </div>
       </Swiper>
 
       <div className="mt-10">

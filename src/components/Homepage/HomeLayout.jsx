@@ -18,12 +18,12 @@ const HomeLayout = () => {
         <div>
             <Banner/>
             <StatCounter/>
-            <CaseStudyPage/>
-            <SuccessStory/>
-            <Ideas/>
-            <FeaturedInterviews/>
             <Resources/>
+            <SuccessStory/>
             <FailureStories/>
+            <FeaturedInterviews/>
+            <Ideas/>
+            <CaseStudyPage/>
             <Guides/>
             <NewsSection/>
             <ReviewsPage/>

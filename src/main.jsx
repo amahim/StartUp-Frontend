@@ -24,6 +24,10 @@ import ResourceDetails from './components/Resources/ResourceDetails';
 import SignIn from './components/User/SignIn';
 import SignUp from './components/User/SignUp';
 import Packages from './components/Subscribes/Packages';
+import AllAuthors from './components/Author/AllAuthors';
+import AuthorDetails from './components/Author/AuthorDetails';
+import AllContributors from './components/Contributor/AllContributors';
+import ContributorDetails from './components/Contributor/ContributorDetails';
 
 const router = createBrowserRouter([
   {
@@ -83,6 +87,22 @@ const router = createBrowserRouter([
       {
         path:"/resources/:id",
         element:<ResourceDetails/>,
+      },
+      {
+        path:"/contributors",
+        element:<AllContributors/>,
+      },
+      {
+        path:"/contributors/:id",
+        element:<ContributorDetails/>,
+      },
+      {
+        path:"/authors",
+        element:<AllAuthors/>,
+      },
+      {
+        path:"/authors/:id",
+        element:<AuthorDetails/>,
       },
       {
         path: "/reviews",
