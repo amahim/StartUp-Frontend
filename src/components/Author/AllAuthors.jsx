@@ -54,12 +54,20 @@ const authors = [
 
 const AllAuthors = () => {
   return (
-    <div className="w-4/5 mx-auto py-10">
-      <h1 className="text-4xl font-bold text-center mb-12">
-        Our Distinguished Authors
+    <div className=" py-10">
+      {/* form */}
+      <div className="flex flex-col justify-center gap-3 bg-base-300 p-10">
+         <p className="text-2xl md:text-3xl text-black font-bold text-center">Sign up to be an author</p>
+        <div className="join flex justify-center">
+          <input className="input join-item input-bordered" placeholder="Email" />
+          <button className="btn join-item rounded-r-xl text-white bg-black ">Be an Author</button>
+        </div>
+      </div>
+      <h1 className="text-4xl font-bold text-center my-10">
+        Our Distinguished Contributors
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {authors.map((author) => (
           <div
             key={author.id}
@@ -79,7 +87,7 @@ const AllAuthors = () => {
 
             <div className="p-4 text-center">
               <Link
-                to={`/authors/${author.id}`}
+                to={`/contributors/${author.id}`}
                 className="inline-block bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors"
               >
                 View Details

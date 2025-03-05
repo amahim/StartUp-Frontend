@@ -28,6 +28,7 @@ import AllAuthors from './components/Author/AllAuthors';
 import AuthorDetails from './components/Author/AuthorDetails';
 import AllContributors from './components/Contributor/AllContributors';
 import ContributorDetails from './components/Contributor/ContributorDetails';
+import StartGrowMonetize from './components/StartGrowMonetize/StartGrowMonetize';
 
 const router = createBrowserRouter([
   {
@@ -88,20 +89,24 @@ const router = createBrowserRouter([
         path:"/resources/:id",
         element:<ResourceDetails/>,
       },
+      // {
+      //   path:"/contributors",
+      //   element:<AllContributors/>,
+      // },
+      // {
+      //   path:"/contributors/:id",
+      //   element:<ContributorDetails/>,
+      // },
+      {
+        path:"/start-grow-monetize",
+        element:<StartGrowMonetize/>,
+      },
       {
         path:"/contributors",
-        element:<AllContributors/>,
-      },
-      {
-        path:"/contributors/:id",
-        element:<ContributorDetails/>,
-      },
-      {
-        path:"/authors",
         element:<AllAuthors/>,
       },
       {
-        path:"/authors/:id",
+        path:"/contributors/:id",
         element:<AuthorDetails/>,
       },
       {

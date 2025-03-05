@@ -66,6 +66,16 @@ const Navbar = () => {
       >
         Resources
       </NavLink>
+      <NavLink
+        to="/start-grow-monetize"
+        className={({ isActive }) =>
+          isActive
+            ? "border-b-2 border-black text-black font-bold whitespace-nowrap"
+            : "text-[#262522] whitespace-nowrap"
+        }
+      >
+        Start grow & monetize
+      </NavLink>
       {/* <NavLink
         to="/authors"
         className={({ isActive }) =>
@@ -140,13 +150,20 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop nav items (excluding Sign In) */}
-          <ul className=" hidden lg:flex items-center gap-3 ml-6">
+          <ul className=" hidden lg:flex items-center gap-3 ml-4 text-sm">
             {links}
           </ul>
         </div>
 
         {/* Right section with search, sign in and subscribe */}
         <div className="navbar-end gap-2 md:gap-4">
+          {/* Category select dropdown */}
+          <select className="select select-bordered w-24 sm:w-32 md:w-36">
+            <option disabled selected>Category</option>
+            <option value="startup">Startup</option>
+            <option value="tech">Tech</option>
+          </select>
+
           {/* Search input for all screen sizes */}
           <div className="relative">
             <input 

@@ -63,8 +63,8 @@ const AuthorDetails = () => {
 
   return (
     <div className="w-4/5 mx-auto py-10">
-      <Link to="/authors" className="flex items-center text-gray-600 mb-6">
-        <FiArrowLeft className="mr-2" /> Back to Authors
+      <Link to="/contributors" className="flex items-center text-gray-600 mb-6">
+        <FiArrowLeft className="mr-2" /> Back to  Contributors
       </Link>
 
       <div className="bg-white rounded-xl shadow-lg overflow-hidden">

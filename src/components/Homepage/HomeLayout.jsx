@@ -27,7 +27,7 @@ const HomeLayout = () => {
             <Ideas/>
             <AuthorsPage/>
             <CaseStudyPage/>
-            <ContributorsPage/>
+            {/* <ContributorsPage/> */}
             <Guides/>
             <NewsSection/>
             {/* <ReviewsPage/> */}

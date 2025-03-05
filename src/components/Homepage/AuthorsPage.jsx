@@ -43,7 +43,7 @@ const authors = [
 const AuthorsPage = () => {
     return (
         <div className="w-4/5 mx-auto py-10">
-            <h2 className="text-4xl font-bold text-center mb-4">Our Distinguished Authors</h2>
+            <h2 className="text-4xl font-bold text-center mb-4">Our Distinguished Contributors</h2>
             <p className="text-gray-600 text-center mb-12">Learn from the best minds in business and technology</p>
             
             <Swiper
@@ -113,10 +113,10 @@ const AuthorsPage = () => {
 
             <div className="text-center">
                 <Link
-                    to="/authors"
+                    to="/contributors"
                     className="inline-block bg-black text-white px-8 py-3 rounded-xl hover:bg-gray-800 transition-colors"
                 >
-                    View All Authors
+                    View All Contributors
                 </Link>
             </div>
         </div>
