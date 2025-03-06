@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Resources = () => {
     return (
         <div className="w-4/5 mx-auto py-10">
-            <div className="relative">
+            <div className="relative border shadow-xl rounded-xl">
                 <img 
                     src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500" 
                     alt="Resources Banner"

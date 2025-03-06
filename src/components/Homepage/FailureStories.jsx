@@ -37,7 +37,7 @@ const FailureStories = () => {
       {/* Failure Stories Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {failureStories.map((story) => (
-          <div key={story.id} className="bg-red-50 rounded-xl p-6 shadow-md">
+          <div key={story.id} className="border shadow-xl bg-red-50 rounded-xl p-6 shadow-md">
             <span className="text-red-600 font-semibold">{story.lossAmount}</span>
             <h3 className="text-xl font-bold mt-2">{story.title}</h3>
             <ul className="mt-4 space-y-2">

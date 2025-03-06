@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import ReviewsPage from './ReviewsPage';
+import ReviewsPage from '../Reviews/ReviewsPage';
 
 const Packages = () => {
     const [isYearly, setIsYearly] = useState(false);

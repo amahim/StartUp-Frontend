@@ -30,7 +30,7 @@ const FeaturedInterviews = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md;gap-8">
           {interviews.map((interview) => (
-            <div key={interview.id} className=" bg-white p-4 md:p-6 rounded-xl shadow-md">
+            <div key={interview.id} className="border shadow-xl bg-white p-4 md:p-6 rounded-xl ">
               <div className="flex md:flex-row flex-col gap-4 items-center mb-4">
                 <img 
                   src={interview.image} 

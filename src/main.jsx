@@ -29,6 +29,7 @@ import AuthorDetails from './components/Author/AuthorDetails';
 import AllContributors from './components/Contributor/AllContributors';
 import ContributorDetails from './components/Contributor/ContributorDetails';
 import StartGrowMonetize from './components/StartGrowMonetize/StartGrowMonetize';
+import Lifetime from './components/Subscribes/Lifetime';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path:"/courses",
         element:<AllCourses/>,
+      },
+      {
+        path:"/lifetime-upgrade",
+        element:<Lifetime/>,
       },
       {
         path:"/course/:id",

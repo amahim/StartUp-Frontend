@@ -158,7 +158,7 @@ const Navbar = () => {
         {/* Right section with search, sign in and subscribe */}
         <div className="navbar-end gap-2 md:gap-4">
           {/* Category select dropdown */}
-          <select className="select select-bordered w-24 sm:w-32 md:w-36">
+          <select className="hidden md:block select select-bordered w-24 sm:w-32 md:w-36">
             <option disabled selected>Category</option>
             <option value="startup">Startup</option>
             <option value="tech">Tech</option>

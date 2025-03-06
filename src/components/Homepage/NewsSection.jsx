@@ -85,7 +85,7 @@ const NewsSection = () => {
                     <Link
                         to={`/news/${item.id}`}
                         key={item.id}
-                        className="group relative overflow-hidden rounded-2xl bg-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                        className="border shadow-xl group relative overflow-hidden rounded-2xl bg-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
                     >
                         <div className="aspect-w-16 aspect-h-9 relative">
                             <img

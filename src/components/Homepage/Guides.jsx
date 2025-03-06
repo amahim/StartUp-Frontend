@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Guides = () => {
     return (
         <div className="w-4/5 mx-auto py-10">
-            <div className="relative">
+            <div className="relative border shadow-xl rounded-xl">
                 <img 
                     src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=500" 
                     alt="Guides Banner"
